@@ -62,12 +62,4 @@ class MazeGenerator {
 			"tag" => $mazeParameters["Tag"]
 		];
 	}
-
-//	public function generate(string $url, array $options): string {
-//		$imageURL = $this->generateImage($url, $options);
-//		$image = curl($imageURL, false, false, false, $url);
-//
-//		header("Content-Type: image/svg+xml");
-//		return $image;
-//	}
 }
