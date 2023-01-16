@@ -139,4 +139,3 @@ function getMazeOptions(int $overrideShape = null) {
 }
 
 displayMazeImage("https://mazegenerator.net/", getMazeOptions());
-unlink(__DIR__."/cookie.txt");
