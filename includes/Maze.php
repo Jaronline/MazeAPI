@@ -80,6 +80,11 @@ class Maze {
 		$imageURL = MAZE::BASE_URL."ImageGenerator.ashx?Tag={$getOptions["tag"]}&Solution={$getOptions["solve"]}";
 		$image = curl($imageURL, false, false, false, MAZE::BASE_URL);
 
+		if (!$image) {
+			sendHTTPResponse(HTTPResponseCode::NotFound);
+			die();
+		}
+
 		header("Content-Type: image/svg+xml");
 		echo $image;
 	}
