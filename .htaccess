@@ -1,0 +1,4 @@
+Options -Indexes
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^(.*)$ index.php?tag=$1 [L,QSA]
